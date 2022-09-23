@@ -1,0 +1,36 @@
+{
+  "blog": [
+    {
+      "id": 1,
+      "title": "Apartment Therapy",
+      "description": "Apartment Therapy is a blog focusing on interior design. It was launched by Maxwell Ryan in 2001. Ryan is an interior designer who turned to blogging (using the moniker “the apartment therapist”). The blog has reached 20 million followers and has expanded into a full-scale media company.",
+      "MainTopicsCovered": "Lifestyle and interior design, design tips, DIY how-tos, shopping guides.",
+      "sourceOfIncome": "product sales, affiliate links",
+      "cover": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_423/at%2Freal-estate%2Ffamily-moving"
+    },
+    {
+      "id": 2,
+      "title": "Say Yes",
+      "description": "Say Yes is an award-winning blog created by Liz Stanley in 2006. Although it could be classified as a mom blog as well, since Liz is a mother of three, it goes beyond that, offering useful advice about other topics, including food, and travel.",
+      "MainTopicsCovered": "Family, travel, food, lifestyle, DIY Built with: WordPress – custom theme",
+      "sourceOfIncome": "sponsored articles, affiliate links, social media",
+      "cover": "https://www.vandelaydesign.com/wp-content/uploads/minimalist-baker-625x452.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Bright Bazaar",
+      "description": "Bright Bazaar was created by Will Taylor, a journalist-turned-interior designer in 2009. Apart from wonderful home tours and design findings, Will shares other exciting details about his lifestyle, including his outfits, recipes, and life in New York City.",
+      "MainTopicsCovered": "Interior design, fashion, food, NYC life, travel.",
+      "sourceOfIncome": "affiliate links, book sales",
+      "cover": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/62649584/original/787737bb6083ee544defcbde3f2d7b999fd856e2.png"
+    },
+    {
+      "id": 4,
+      "title": "A Cup of Jo",
+      "description": "A weekend hobby for Joanna Goddard turned into a full-time job. She started A Cup of Jo in 2007 and became a superstar lifestyle blogger. In fact, the site is barely a personal blog anymore, as Jo now has a team of professional writers who share her interests, such as style, design, food, and motherhood.",
+      "MainTopicsCovered": "Style, design, food, motherhood, travel, relationships.",
+      "sourceOfIncome": "product sales, affiliate links",
+      "cover": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_423/at%2Freal-estate%2Ffamily-moving"
+    }
+  ]
+}
