@@ -8,7 +8,7 @@ const Posts = ({ blogs }) => {
       {blogs.map((blog) => (
         <Link
           to={`postdetail/${blog.id}`}
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ color: "black" }}
           key={blog.id}
         >
           <Post {...blog} />

@@ -1,0 +1,27 @@
+$colorBlack: #111;
+$colorWhite: #fff;
+
+@mixin btn($colorBlack, $colorWhite, $width) {
+  margin: 10px 0;
+  width: $width;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: $colorBlack;
+  color: $colorWhite;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+  @media screen and (max-width: 820px) {
+    width: 100%;
+  }
+}

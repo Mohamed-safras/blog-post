@@ -13,7 +13,8 @@ const Home = () => {
     <React.Fragment>
       {isLoading && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
-      {blogs && <Posts blogs={blogs} />}
+      {blogs &&
+        (blogs.length > 0 ? <Posts blogs={blogs} /> : <h1>No blog found</h1>)}
     </React.Fragment>
   );
 };

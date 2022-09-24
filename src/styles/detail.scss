@@ -1,0 +1,35 @@
+@import "./global.scss";
+
+.post-title {
+  color: #111;
+  font-weight: 600;
+  font-size: 30px;
+}
+.description {
+  width: 100%;
+  height: 100%;
+  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.cover-image {
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+}
+.button-continer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  .btn {
+    @include btn($colorBlack, $colorWhite, 20%);
+    margin: 10px;
+  }
+}
