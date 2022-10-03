@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Spinner from "../assets/Spinner.svg";
+import { ReactComponent as Spinner } from "../assets/Spinner.svg";
 
 const Update = () => {
-  const { id } = useParams();
   const Navigate = useNavigate();
+  const { id } = useParams();
+
   const [blog, setBlog] = useState({
     title: "",
     description: "",
@@ -30,6 +31,7 @@ const Update = () => {
 
   const update = (event) => {
     event.preventDefault();
+    setIsLoading(true);
     fetch(`http://localhost:8000/blogs/${id}`, {
       method: "PUT",
       headers: {
@@ -38,12 +40,14 @@ const Update = () => {
       body: JSON.stringify(blog),
     })
       .then((res) => {
+        setIsLoading(false);
         Navigate("/");
         return res.json();
       })
-      .then((data) => console.log(data))
+
       .catch((err) => {
-        console.log(err);
+        setIsLoading(false);
+        setError(err.message);
       });
   };
   return (
@@ -84,9 +88,7 @@ const Update = () => {
           placeholder="Enter cover image url"
         />
       </div>
-      <button className="submit">
-        {!isLoading ? `update` : <img src={Spinner} alt="spinner" />}
-      </button>
+      <button className="submit">{!isLoading ? `update` : <Spinner />}</button>
     </form>
   );
 };

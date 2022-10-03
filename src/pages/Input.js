@@ -1,5 +1,5 @@
 import React from "react";
-import Spinner from "../assets/Spinner.svg";
+import { ReactComponent as Spinner } from "../assets/Spinner.svg";
 
 import "../styles/input.scss";
 
@@ -51,7 +51,7 @@ const Form = ({
         />
       </div>
       <button className="submit">
-        {!isLoading ? `${typeOfAction}` : <img src={Spinner} alt="spinner" />}
+        {!isLoading ? `${typeOfAction}` : <Spinner />}
       </button>
     </React.Fragment>
   );

@@ -3,16 +3,21 @@ import { useNavigate } from "react-router-dom";
 
 import Input from "../pages/Input";
 import "../styles/addpost.scss";
-const AddPost = ({
-  setIsLoading,
-  blog,
-  setError,
-  setBlog,
-  error,
-  isLoading,
-  handelChange,
-}) => {
+const AddPost = () => {
   const navigate = useNavigate();
+  const [blog, setBlog] = useState({
+    title: "",
+    description: "",
+    blogtype: "design",
+    cover: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handelChange = (e) => {
+    setBlog((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handelSubmit = async (event) => {
     event.preventDefault();
