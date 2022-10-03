@@ -7,14 +7,18 @@ const Home = () => {
     data: blogs,
     isLoading,
     error,
-  } = useFetch("http://localhost:8000/blog");
+  } = useFetch("http://localhost:8000/blogs");
 
   return (
     <React.Fragment>
       {isLoading && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
       {blogs &&
-        (blogs.length > 0 ? <Posts blogs={blogs} /> : <h1>No blog found</h1>)}
+        (blogs.length > 0 ? (
+          <Posts blogs={blogs} />
+        ) : (
+          <h1>No blog available</h1>
+        ))}
     </React.Fragment>
   );
 };

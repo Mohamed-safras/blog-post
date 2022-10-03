@@ -14,12 +14,12 @@ const Detail = () => {
     data: blog,
     isLoading,
     error,
-  } = useFetch(`http://localhost:8000/blog/${id}`);
+  } = useFetch(`http://localhost:8000/blogs/${id}`);
 
   const handleDeletePost = async () => {
     setIsDeleting(true);
     try {
-      fetch(`http://localhost:8000/blog/${id}`, {
+      fetch(`http://localhost:8000/blogs/${id}`, {
         method: "DELETE",
       }).then((response) => {
         if (!response.ok) {

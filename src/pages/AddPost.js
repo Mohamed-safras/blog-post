@@ -3,26 +3,23 @@ import { useNavigate } from "react-router-dom";
 
 import Input from "../pages/Input";
 import "../styles/addpost.scss";
-const AddPost = () => {
-  const [blog, setBlog] = useState({
-    title: "",
-    description: "",
-    blogtype: "design",
-    cover: "",
-  });
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const handelChange = (e) => {
-    setBlog((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+const AddPost = ({
+  setIsLoading,
+  blog,
+  setError,
+  setBlog,
+  error,
+  isLoading,
+  handelChange,
+}) => {
   const navigate = useNavigate();
 
   const handelSubmit = async (event) => {
     event.preventDefault();
+
     try {
       setIsLoading(true);
-      await fetch("http://localhost:8000/blog", {
+      await fetch("http://localhost:8000/blogs", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
